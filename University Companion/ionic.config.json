@@ -1,0 +1,7 @@
+{
+  "name": "swen325IonicApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

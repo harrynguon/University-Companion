@@ -1,0 +1,61 @@
+<!--
+  Generated template for the LecturePromptPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+        <button ion-button (click)="dismiss()">Cancel</button>
+    </ion-buttons>
+    <ion-title>{{addOrModify()}} a Lecture</ion-title>
+    <ion-buttons end *ngIf="isAddLecture && courseName && room && (startTime<endTime) && (repeatFinish>=startTime)">
+        <button ion-button (click)="addLecture()">Add</button>
+    </ion-buttons>
+    <ion-buttons end *ngIf="isAddLecture && (!courseName || !room || (startTime>=endTime) || (repeatFinish<startTime))">
+        <button ion-button disabled="true" (click)="addLecture()">Add</button>
+    </ion-buttons>
+    <ion-buttons end *ngIf=!isAddLecture>
+        <button ion-button (click)="modifyLecture()">Modify</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p *ngIf="isAddLecture">Enter the details below to add a new lecture to your timetable.</p>
+  <p *ngIf="!isAddLecture">Amend changes to your lecture</p>
+  <ion-item>
+      <ion-label color="primary">Course Name</ion-label>
+      <ion-input text-right [(ngModel)]="courseName"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label color="primary">Room</ion-label>
+      <ion-input text-right [(ngModel)]="room"></ion-input>
+  </ion-item>
+  <ion-item center>
+      <ion-label>Start Time</ion-label>
+      <ion-datetime
+      displayFormat="hh:mm A" [(ngModel)]="startTime">
+      </ion-datetime>
+  </ion-item>
+  <ion-item center>
+      <ion-label>End Time</ion-label>
+      <ion-datetime
+      displayFormat="hh:mm A" [(ngModel)]="endTime">
+      </ion-datetime>
+  </ion-item>
+  <ion-item *ngIf="isAddLecture">
+    <ion-label *ngIf="isAddLecture">Repeat Every Week</ion-label>
+    <ion-toggle [(ngModel)]="repeat"></ion-toggle>
+  </ion-item>
+  <ion-item center *ngIf="repeat">
+    <ion-label>Repeat End Date</ion-label>
+    <ion-datetime
+    displayFormat="D MMM YYYY" min = "2018" max="2023"[(ngModel)]="repeatFinish">
+    </ion-datetime>
+</ion-item>
+</ion-content>

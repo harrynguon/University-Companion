@@ -1,0 +1,41 @@
+IonicStuff
+
+File Structure
+src/app folder
+Tree structure for the components
+
+Navigation
+Navigation works like a simple stack. Pages get pushed, going back works from popping the current page off. this.navCtrl was set in the constructor, and so this.navCtrl.push()/pop() can be used for navigation. You can also pass it an object containing data.
+
+
+Pages
+creating a new page: ionic g page [name]
+
+Importing
+import { PageName } from '../folder/tsFileName'
+'../' means go up one directory, and the .ts file extension does not need to explicitly be stated
+Then modify app.module.ts
+
+
+In the .html files
+{{...}} references the javascript field, e.g. {{item.id}}
+
+
+Modals
+// let modal = this.modalController.create(SecondPage);
+
+// modal.onDidDismiss((data) =>  {
+//   console.log(data);
+// })
+
+// modal.present();
+
+Using ModalController, you can create pop up web pages and transfer data back and forth
+
+Pushing pages onto the stack
+navCtrl.push(PageName, data);
+
+
+Ion-Input
+(input)='function()'
+[(ngModel)]='fieldName'

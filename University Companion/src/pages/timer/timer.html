@@ -1,0 +1,40 @@
+<!--
+  Generated template for the TimerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pomodoro Study Timer</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="information-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div style="text-align: center">
+  <h1>Pomodoro Timer</h1>
+  <!-- <i>Pomodoro Interval: {{ORIGINAL_INTERVAL}} seconds</i>
+  <br>
+  <i>Break Period Interval: {{ORIGINAL_BREAKTIME}} seconds</i> -->
+
+  <h5>{{breakOrStudy()}}</h5>
+  <h2>Time Left: {{timeString}}</h2>
+  <br>
+  <button ion-button *ngIf="!breakPeriod && !hideStartBtn" (click) = "startTimer()">Start</button>
+  <button ion-button *ngIf="hideStartBtn" color="light" disabled="true">Start</button>
+  <button ion-button (click) = "toggleTimer()" >{{pauseResumeButton}}</button>
+  <button ion-button *ngIf="!breakPeriod" (click) = "resetTimer()" >Reset</button>
+  <button ion-button *ngIf="breakPeriod" color="light" disabled="true" >Reset</button>
+</div>
+
+</ion-content>

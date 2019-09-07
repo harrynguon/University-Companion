@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "952724177167",
+    "firebase_url": "https://swen325-react-native-app-69ebc.firebaseio.com",
+    "project_id": "swen325-react-native-app-69ebc",
+    "storage_bucket": "swen325-react-native-app-69ebc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952724177167:android:520a41ef627428ae",
+        "android_client_info": {
+          "package_name": "com.harrynguon.universitycompanionreactnative"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952724177167-ovhqcg1vjv9ilmt698u2ll0itqjnfuno.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGNeiE5cw6RBkShhgRuGyBokd4eiqbxKY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
