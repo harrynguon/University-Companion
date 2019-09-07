@@ -4,6 +4,8 @@ For the 'Software Development for Mobile' undergraduate course, I implemented a 
 
 The app consists of a lecture timetable page where you can add, modify, and remove lectures to your timetable. It also consists of a pomodoro timer page which can be used freely to allocate your time for studying. The timer can be adjusted in the settings page. Finally, the app contains user authentication functionality via Google Firebase.
 
-Screenshots:
+The source code has been imported from my private repository.
+
+Screenshots of the app (Ionic implementation):
 
 ![Screenshot](screenshots_collated.png)
