@@ -6,6 +6,14 @@ The app consists of a lecture timetable page where you can add, modify, and remo
 
 The source code has been imported from my private repository.
 
+`/University Companion`
+
+This folder contains the source code for the Ionic implementation of the app.
+
+`/University Companion React Native`
+
+This folder contains the source code for the React Native implementation of the app.
+
 Screenshots of the app (Ionic implementation):
 
 ![Screenshot](screenshots_collated.png)
